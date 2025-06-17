@@ -1,0 +1,17 @@
+{
+    "name": "tea-aroma/exile-core",
+    "description": "Provides foundational interfaces, abstractions, and utility classes shared across Exile modules.",
+    "keywords": ["laravel", "exile", "core", "exile-core"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TeaAroma\\ExileCore\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12"
+    }
+}
