@@ -6,6 +6,7 @@ namespace TeaAroma\ExileCore\Validations\Classes;
 use Illuminate\Support\Collection;
 use ReflectionAttribute;
 use ReflectionProperty;
+use TeaAroma\ExileCore\Formatters\Classes\TemplateParametersFormatter;
 use TeaAroma\ExileCore\Validations\Abstracts\Validator;
 use TeaAroma\ExileCore\Validations\Interfaces\ValidationRuleInterface;
 
@@ -80,9 +81,9 @@ class PropertyValidator extends Validator
 
         if (!$instance->validate($this->getValue()))
         {
-            $formatter = new MessageFormatter($instance, [ 'name' => $this->getName() ]);
+            $formatter = new TemplateParametersFormatter($instance->message(), [ 'name' => $this->getName(), ...$instance->messageTemplateKeys() ]);
 
-            $this->messages->push($formatter->getMessage());
+            $this->messages->push($formatter->format());
         }
     }
 
