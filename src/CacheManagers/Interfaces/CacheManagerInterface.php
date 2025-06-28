@@ -50,11 +50,11 @@ interface CacheManagerInterface
     public function forget(string $key): bool;
 
     /**
-     * Remove all items.
+     * Clears all items.
      *
      * @return bool
      */
-    public function flush(): bool;
+    public function clear(): bool;
 
     /**
      * Returns a cached value by the specified key, or execute the given Closure and saves the result.

@@ -14,7 +14,8 @@
         "php": "^8.2",
         "illuminate/support": "^12",
         "illuminate/http": "^12",
-	  "ext-dom": "*",
-	  "ext-libxml": "*"
+        "illuminate/cache": "^12",
+	    "ext-dom": "*",
+	    "ext-libxml": "*"
 	}
 }
